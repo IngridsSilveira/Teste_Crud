@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando Crud</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="titulo">
+                <h1>Lista Crud!</h1>
+                <p>Coisas que preciso fazer:</p>
+            </div>
+            <div class="form">
+                <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
+                    <input type="text" id="add-todo" placeholder="Coisas para fazer">
+                    <input type="submit" value="Add" class="btn-primary">
+                </form>
+                <p>Você tem:</p>
+                <p id="counter"></p>
+            </div>
+            <table>
+                <tr class="to-do">
+                    <th>Para fazer:</th>
+                </tr>
+                <tbody id="tasks"></tbody>
+            </table>
+            <div id="edit-box" role="aria-hidden">
+                <form action="javascript:void(0);" method="POST" id="save-edit">
+                    <input type="text" id="edit-todo">
+                    <input type="submit" value="Save" class="btn-success">
+                    <a onclick="CloseInput()" aria-label="close">
+                    &#10006;</a>
+                </form>
+            </div>
+            <footer>
+                Coded by <a href="#">Ingrid de Souza</a>🔥
+            </footer>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
